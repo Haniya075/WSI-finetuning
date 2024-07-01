@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import numpy as np
-import topk.functional as F
+import utils.topk.functional as F
 
 from topk.utils import detect_large
 
