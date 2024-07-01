@@ -23,7 +23,7 @@ def Topk_Hard_SVM(labels, k, alpha=1.):
         max_1, _ = (x_1 + alpha).utils.topk(k, dim=1)
         max_1 = max_1.mean(1)
 
-        max_2, _ = x_1.topk(k - 1, dim=1)
+        max_2, _ = x_1.utils.topk(k - 1, dim=1)
         max_2 = (max_2.sum(1) + x_2) / k
 
         loss = torch.clamp(max_1 - max_2, min=0)
