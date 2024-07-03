@@ -308,13 +308,6 @@ class WholeSlideImage(object):
             print("Custom Downsample: {}, Patching at {} x {}, But Final Patch Size is {} x {}".format(custom_downsample, patch_size, patch_size, 
                 target_patch_size, target_patch_size))
             
-        print(f"patch_level: {patch_level}")
-        print(f"self.level_downsamples length: {len(self.level_downsamples)}")
-        if patch_level < len(self.level_downsamples):
-            print(f"self.level_downsamples[{patch_level}]: {self.level_downsamples[patch_level]}")
-        else:
-            print(f"ERROR: patch_level {patch_level} is out of range for self.level_downsamples")
-            
         patch_downsample = (int(self.level_downsamples[patch_level][0]), int(self.level_downsamples[patch_level][1]))
         ref_patch_size = (patch_size*patch_downsample[0], patch_size*patch_downsample[1])
         
