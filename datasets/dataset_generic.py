@@ -329,6 +329,7 @@ class Generic_MIL_Dataset(Generic_WSI_Classification_Dataset):
 
 	def __getitem__(self, idx):
 		slide_id = self.slide_data['slide_id'][idx].iloc[:12]
+		print("HELPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP ",slide_id)
 		label = self.slide_data['label'][idx]
 		if type(self.data_dir) == dict:
 			source = self.slide_data['source'][idx]
