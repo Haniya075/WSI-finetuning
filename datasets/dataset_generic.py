@@ -193,7 +193,7 @@ class Generic_WSI_Classification_Dataset(Dataset):
 		split = split.dropna().reset_index(drop=True)
 
 		if len(split) > 0:
-			mask = self.slide_data['slide_id'][:12].isin(split.tolist())
+			mask = self.slide_data['slide_id'].isin(split.tolist())
 			df_slice = self.slide_data[mask].reset_index(drop=True)
 			split = Generic_Split(df_slice, data_dir=self.data_dir, num_classes=self.num_classes)
 		else:
