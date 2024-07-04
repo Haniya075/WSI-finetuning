@@ -219,6 +219,7 @@ class Generic_WSI_Classification_Dataset(Dataset):
 
 
 	def return_splits(self, from_id=True, csv_path=None):
+		print("FORMMMMMMMMMMMMMMMMMMMMMMM ",from_id)
 		if from_id:
 			print("HARISSSSSSSSSSSSSSSSSSSSSSSSsss ",len(self.train_ids))
 			if len(self.train_ids) > 0:
