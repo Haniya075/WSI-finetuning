@@ -182,9 +182,11 @@ class Generic_WSI_Classification_Dataset(Dataset):
 					slide_ids[split].extend(slide_indices)
 
 			self.train_ids, self.val_ids, self.test_ids = slide_ids[0], slide_ids[1], slide_ids[2]
+			print("CHECKING : ",self.train_ids,"*****",self.val_ids,"*****",self.test_ids)
 
 		else:
 			self.train_ids, self.val_ids, self.test_ids = ids
+			print("CHECKING ELSE  : ",self.train_ids,"*****",self.val_ids,"*****",self.test_ids)
 
 	def get_split_from_df(self, all_splits, split_key='train'):
 		split = all_splits[split_key]
