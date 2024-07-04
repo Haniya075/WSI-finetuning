@@ -54,6 +54,7 @@ def main(args):
         print("CHECKLSLKSKSKLSKALKSLKALSKLAKSLKASLKALSKAKSLASLKASLK ",train_dataset, val_dataset, test_dataset)
         # train_loader = get_split_loader(train_dataset)
         datasets = (train_dataset, val_dataset, test_dataset)
+        print("HEKLEKELKELEKLELEKLKLLCKLKLKLKLKLK ",datasets)
         results, test_auc, val_auc, test_acc, val_acc  = train(datasets, i, args)
         print("CHECKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK ",results, test_auc, val_auc, test_acc, val_acc)
         all_test_auc.append(test_auc)
