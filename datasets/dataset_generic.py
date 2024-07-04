@@ -219,19 +219,21 @@ class Generic_WSI_Classification_Dataset(Dataset):
 
 
 	def return_splits(self, from_id=True, csv_path=None):
-
-
 		if from_id:
+			print("HARISSSSSSSSSSSSSSSSSSSSSSSSsss ",len(self.train_ids))
 			if len(self.train_ids) > 0:
 				train_data = self.slide_data.loc[self.train_ids].reset_index(drop=True)
 				train_split = Generic_Split(train_data, data_dir=self.data_dir, num_classes=self.num_classes)
+				print("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO ",train_data,train_split)
 
 			else:
+				print("ELSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE1")
 				train_split = None
 			
 			if len(self.val_ids) > 0:
 				val_data = self.slide_data.loc[self.val_ids].reset_index(drop=True)
 				val_split = Generic_Split(val_data, data_dir=self.data_dir, num_classes=self.num_classes)
+				
 
 			else:
 				val_split = None
